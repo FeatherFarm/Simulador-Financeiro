@@ -34,7 +34,7 @@
         var qtd_aves = Number(qtd_aves_i.value);
         var qtd_galpao = Number(qtd_galpao_i.value);
         var total = (valor * qtd_aves) * qtd_galpao; 
-        var economia = total * 22 / 100; 
+        var economia = total * 20 / 100; 
         var area = Number(area_gal_i.value);
         var valor_sensor = (((area / 12).toFixed(0)) * 200) * qtd_galpao;
         
@@ -44,8 +44,21 @@
         }else{
             
             exibir_infos.innerHTML += `O seu valor atual investido em aves é de R$${total.toFixed(2)} <br>`;
-            exibir_infos.innerHTML += `Te gerando uma economia de até R$${(economia).toFixed(2)} <br>`
-            exibir_infos.innerHTML += `Você precisara de ${(area / 12).toFixed(0)} sensores por galpão, 
+            exibir_infos.innerHTML += `<h2> Vamos simular o prejuizo que você pode ter! </h2><br>`;
+            exibir_infos.innerHTML += `<span id="spam1"> Com o prejuizo de 20%, sua perda será de : R$${(economia).toFixed(2)} </span> <br>`;   
+            exibir_infos.innerHTML += `<span id="spam2"> Com o prejuizo de 10%, sua perda será de : R$${(total * 10 / 100).toFixed(2)}  </span><br>`; 
+            exibir_infos.innerHTML += `<span id="spam3"> Com o prejuizo de 5%, sua perda será de : R$${(total * 5 / 100).toFixed(2)} </span><br>`;   
+            
+            
+            
+            
+            
+            
+            
+
+
+
+            exibir_infos.innerHTML += `Você precisará de ${(area / 12).toFixed(0)} sensores por galpão, 
             totalizando um investimento de R$${(valor_sensor).toFixed(2)} <br>`
         };
     };
